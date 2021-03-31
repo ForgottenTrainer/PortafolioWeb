@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+  
+li a:hover {
+    transition: 0.5s;
+    background-color: rgb(82, 43, 119);
+}
+body{
+    text-decoration: none;
+    font-family:sans-serif;
+}
+.portada{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('imagenes/wallpaper.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    
+}
+.me{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color:cornsilk;
+}
+.quien{
+    display: flex;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url('imagenes/monta.jpg');
+    color: #ffff;
+    background-position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+.quien p{
+    margin-top: 200px;
+    text-align: center;
+    padding: 0 0 30px 15px;
+    font-size: 25px;
+    font-weight: 300;
+}
+    
+.tecno {
+    background:rgb(211, 209, 212) ;
+    text-align: center;
+    font-size: 25px;
+    height: 600px;
+}
+.Conocimientos {
+    padding: 20px;
+}
+.galeria {
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.image{
+    width: 22%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+}
+.image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hov {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(54, 23, 105, 0.5);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hov img{
+    width: 50px;
+}
+.hov p{
+    color: seashell;
+}
+
+.image:hover .hov {
+    transform: scale(1);
+}
+
+footer {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    text-align: center;
+    color: cornsilk;
+    text-decoration: none;
+    width: 100%;
+}
+footer > a{
+    color:rgb(211, 209, 212);
+    text-decoration: none;
+}
+.gal {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imga{
+    width: 22%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.imga > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media screen and (max-width:900px){
+    header {
+        background-position: center;
+    }
+    .quien{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .image {
+        width: 44%;
+    }
+    .galeria{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    nav > a {
+        margin-right: 5px;
+    }
+    .quien > p{
+        font-size: 13px;
+        text-align: left;
+    }
+    .tecno{
+        height: 1000px;
+        width: 100%;
+    }
+    .image{
+        width: 90%;
+    }
+    footer {
+        flex-direction: column;
+    }
+}
